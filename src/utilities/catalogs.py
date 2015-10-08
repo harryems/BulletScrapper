@@ -95,8 +95,6 @@ class Catalogs(object):
     def getCatalog(self):
         url="http://media.pcna.com/msfiles/PCNAFileSharing/Bullet_CatalogUS.xlsx"
         nameFile="Bullet_CatalogUS.xlsx"
-        
-        header=['itemno','item status','itemname','material','patentinfo','catalogdescription','materialdescpatent','colorlist','catalogsize','imprinttextall','packagingandweight','packagingdetails','disclaimers','batteries','catalogruncharges','priceqtycol1','priceqtycol2','priceqtycol3','priceqtycol4','priceqtycol5','priceuscol1','priceuscol2','priceuscol3','priceuscol4','priceuscol5','price code']
         self.downloadFile(url,nameFile)
         book = xlrd.open_workbook(nameFile)
         sheet = book.sheet_by_name("Sheet1")
